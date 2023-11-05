@@ -104,13 +104,15 @@ function IntroSection() {
                                 fontSize: '1.5rem',
                             }}
                         >{`my work`}</Typography>
-                        <IconButton sx={{ ':hover': { color: 'white' } }}>
+                        <IconButton
+                            sx={{ padding: '0', ':hover': { color: 'white' } }}
+                        >
                             <ArrowBackIosNewRoundedIcon
                                 sx={{
                                     color: '#E0C8E8',
                                     fontSize: '3rem',
                                     rotate: '-90deg',
-                                    ':hover': { color: 'white' }
+                                    ':hover': { color: 'white' },
                                 }}
                             />
                         </IconButton>
