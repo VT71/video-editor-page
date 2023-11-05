@@ -1,13 +1,16 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'Goldman-Regular';
+    src: local('Goldman-Regular'),
+        url(/public/fonts/Goldman/Goldman-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'KaushanScript-Regular';
+    src: local('KaushanScript-Regular'),
+        url(/public/fonts/Kaushan_Script/KaushanScript-Regular.ttf)
+            format('truetype');
 }
