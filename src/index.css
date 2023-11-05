@@ -14,3 +14,9 @@ body {
         url(/public/fonts/Kaushan_Script/KaushanScript-Regular.ttf)
             format('truetype');
 }
+
+@font-face {
+    font-family: 'Bangers';
+    src: local('Bangers'),
+        url(/public/fonts/Bangers/Bangers-Regular.ttf) format('truetype');
+}

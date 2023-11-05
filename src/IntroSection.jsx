@@ -31,11 +31,10 @@ function IntroSection() {
                     muted
                     style={{
                         position: 'absolute',
-                        left: '50%',
-                        top: '50%',
-                        transform: 'translateX(-50%) translateY(-50%)',
-                        minWidth: '100%',
-                        minHeight: '100%',
+                        // left: '50%',
+                        // top: '50%',
+                        // transform: 'translateX(-50%) translateY(-50%)',
+                        maxHeight: '100%',
                         width: 'auto',
                         height: 'auto',
                     }}
@@ -76,19 +75,52 @@ function IntroSection() {
                         alignItems: 'center',
                         justifyContent: 'start',
                         marginBottom: '1.5rem',
-                        rowGap: '1.2rem',
+                        rowGap: '2rem',
                     }}
                 >
-                    <Box>
-                        <Typography
-                            sx={{
-                                fontFamily: 'KaushanScript-Regular',
-                                color: '#E0C8E8',
-                                fontSize: '3.6rem',
-                                textShadow: '0px 2px 10px #5E001E',
-                            }}
-                        >{`KRIS_ESFD`}</Typography>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <Box>
+                            <Typography
+                                sx={{
+                                    fontFamily: 'KaushanScript-Regular',
+                                    color: '#E0C8E8',
+                                    fontSize: '3.6rem',
+                                    textShadow: '0px 2px 10px #5E001E',
+                                }}
+                            >{`KRIS_ESFD`}</Typography>
+                        </Box>
+                        <Box sx={{ display: 'flex', columnGap: '1.7rem' }}>
+                            <Box
+                                sx={{
+                                    width: '24px',
+                                    height: '24px',
+                                    backgroundImage:
+                                        'url("./images/instagramLogo.png")',
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundPosition: 'center',
+                                }}
+                            ></Box>
+                            <Box
+                                sx={{
+                                    width: '24px',
+                                    height: '24px',
+                                    backgroundImage:
+                                        'url("./images/pinterestLogo.png")',
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundPosition: 'center',
+                                }}
+                            ></Box>
+                        </Box>
                     </Box>
+
                     <Box
                         sx={{
                             display: 'flex',
