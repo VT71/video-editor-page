@@ -31,8 +31,29 @@ function ArtSection() {
                     }}
                 >{`My Art`}</Typography>
             </Box>
-            <Box>
-                <VideoCard />
+            <Box
+                sx={{
+                    width: '920px',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    columnGap: '2rem',
+                }}
+            >
+                <VideoCard
+                    videoName={'video1'}
+                    videoFormat={'mp4'}
+                    coverName={'video1Cover.png'}
+                />
+                <VideoCard
+                    videoName={'video2'}
+                    videoFormat={'mp4'}
+                    coverName={'video2Cover.png'}
+                />
+                <VideoCard
+                    videoName={'video3'}
+                    videoFormat={'mp4'}
+                    coverName={'video3Cover.png'}
+                />
             </Box>
         </Box>
     );

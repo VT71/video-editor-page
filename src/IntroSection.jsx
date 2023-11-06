@@ -39,7 +39,7 @@ function IntroSection() {
                         height: 'auto',
                     }}
                 >
-                    <source src='./videos/introVideo1.mp4' type='video/mp4' />
+                    <source src='./videos/introVideo.mp4' type='video/mp4' />
                 </video>
             </Box>
             <Box
