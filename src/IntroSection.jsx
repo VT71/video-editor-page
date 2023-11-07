@@ -105,6 +105,11 @@ function IntroSection() {
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: 'center',
+                                    transition: 'scale 0.5s ease',
+                                    cursor: 'pointer',
+                                    ':hover': {
+                                        scale: '1.08',
+                                    },
                                 }}
                             ></Box>
                             <Box
@@ -116,6 +121,11 @@ function IntroSection() {
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: 'center',
+                                    transition: 'scale 0.5s ease',
+                                    cursor: 'pointer',
+                                    ':hover': {
+                                        scale: '1.08',
+                                    },
                                 }}
                             ></Box>
                         </Box>

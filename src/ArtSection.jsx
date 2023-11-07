@@ -43,6 +43,7 @@ function ArtSection() {
             >
                 {new Array(12).fill(0).map((_, index) => (
                     <VideoCard
+                        key={index}
                         videoName={`video${index + 1}`}
                         videoFormat={'mp4'}
                         coverName={`video${index + 1}Cover.png`}
