@@ -33,27 +33,21 @@ function ArtSection() {
             </Box>
             <Box
                 sx={{
-                    width: '920px',
+                    width: '800px',
                     display: 'flex',
                     justifyContent: 'space-between',
-                    columnGap: '2rem',
+                    columnGap: '3rem',
+                    rowGap: '5rem',
+                    flexWrap: 'wrap',
                 }}
             >
-                <VideoCard
-                    videoName={'video1'}
-                    videoFormat={'mp4'}
-                    coverName={'video1Cover.png'}
-                />
-                <VideoCard
-                    videoName={'video2'}
-                    videoFormat={'mp4'}
-                    coverName={'video2Cover.png'}
-                />
-                <VideoCard
-                    videoName={'video3'}
-                    videoFormat={'mp4'}
-                    coverName={'video3Cover.png'}
-                />
+                {new Array(12).fill(0).map((_, index) => (
+                    <VideoCard
+                        videoName={`video${index + 1}`}
+                        videoFormat={'mp4'}
+                        coverName={`video${index + 1}Cover.png`}
+                    />
+                ))}
             </Box>
         </Box>
     );
