@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/video-editor-page/static/css/main.cd3f928e.css",
+    "main.js": "/video-editor-page/static/js/main.56721f16.js",
+    "static/media/KaushanScript-Regular.ttf": "/video-editor-page/static/media/KaushanScript-Regular.a668b3d996f7c50fb3fe.ttf",
+    "static/media/Bangers-Regular.ttf": "/video-editor-page/static/media/Bangers-Regular.f0f1f39c39ee2df57fd7.ttf",
+    "static/media/Goldman-Regular.ttf": "/video-editor-page/static/media/Goldman-Regular.93b3965cf4c8f6ce3e4b.ttf",
+    "index.html": "/video-editor-page/index.html",
+    "main.cd3f928e.css.map": "/video-editor-page/static/css/main.cd3f928e.css.map",
+    "main.56721f16.js.map": "/video-editor-page/static/js/main.56721f16.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd3f928e.css",
+    "static/js/main.56721f16.js"
+  ]
+}
