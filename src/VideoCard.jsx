@@ -1,15 +1,36 @@
 import React from 'react';
+import { useRef } from 'react';
 
 // @mui
 import { Box } from '@mui/material';
 
-function VideoCard({ videoName, videoFormat, coverName }) {
+function VideoCard({ volume, videoName, videoFormat, coverName }) {
+    const isPlaying = useRef(false);
+
     const handleMouseOver = () => {
         console.log('mouse over');
         document.getElementById(`${videoName}-layer`).style.backgroundColor =
             'rgba(0,0,0,0)';
         document.getElementById(`${videoName}`).style.zIndex = '1';
-        document.getElementById(`${videoName}`).play();
+        try {
+            console.log('Volume: ' + volume);
+            if (volume || volume === 0) {
+                console.log('volume', volume);
+                document.getElementById(`${videoName}`).volume = volume / 100;
+            }
+            let promise = document.getElementById(`${videoName}`).play();
+            if (promise !== undefined) {
+                promise
+                    .then(() => {
+                        isPlaying.current = true;
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
+            }
+        } catch (err) {
+            console.log(err);
+        }
     };
 
     const handleMouseOut = () => {
@@ -17,11 +38,14 @@ function VideoCard({ videoName, videoFormat, coverName }) {
             'rgba(0,0,0,1)';
         setTimeout(() => {
             document.getElementById(`${videoName}`).style.zIndex = '-1';
-            document.getElementById(`${videoName}`).pause();
-            document.getElementById(`${videoName}`).currentTime = 0;
-            document.getElementById(
-                `${videoName}-layer`
-            ).style.backgroundColor = 'rgba(0,0,0,0.4)';
+            if (isPlaying) {
+                isPlaying.current = false;
+                document.getElementById(`${videoName}`).pause();
+                document.getElementById(`${videoName}`).currentTime = 0;
+                document.getElementById(
+                    `${videoName}-layer`
+                ).style.backgroundColor = 'rgba(0,0,0,0.4)';
+            }
         }, 500);
     };
 
@@ -59,8 +83,7 @@ function VideoCard({ videoName, videoFormat, coverName }) {
                         sx={{
                             width: '24px',
                             height: '24px',
-                            backgroundImage:
-                                'url("./images/instagramLogo.png")',
+                            backgroundImage: `url("./images/instagramLogo.png")`,
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'center',
@@ -94,7 +117,6 @@ function VideoCard({ videoName, videoFormat, coverName }) {
                         position: 'relative',
                         width: '100%',
                         height: '100%',
-                        position: 'relative',
                         overflow: 'hidden',
                         boxShadow: '0 0 25px -5px #FFFFFF',
                         transition: 'all 0.8s ease',
@@ -120,6 +142,7 @@ function VideoCard({ videoName, videoFormat, coverName }) {
                         }}
                     >
                         <video
+                            muted={volume ? false : true}
                             id={`${videoName}`}
                             style={{
                                 position: 'absolute',
@@ -133,7 +156,7 @@ function VideoCard({ videoName, videoFormat, coverName }) {
                             }}
                         >
                             <source
-                                src={`./videos/${videoName}.${videoFormat}`}
+                                src={`/videos/${videoName}.${videoFormat}`}
                                 type={`video/${videoFormat}`}
                             />
                         </video>

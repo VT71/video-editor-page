@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css';
 
 // @mui
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Stack, Slider, Button } from '@mui/material';
 
 // components
 import VideoCard from './VideoCard';
 
 function ArtSection() {
+    const [volume, setVolume] = useState(0);
+
     return (
         <Box
             sx={{
@@ -21,7 +23,13 @@ function ArtSection() {
                 paddingY: '4rem',
             }}
         >
-            <Box>
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                }}
+            >
                 <Typography
                     sx={{
                         color: '#E0C8E8',
@@ -30,7 +38,76 @@ function ArtSection() {
                         fontFamily: 'Bangers',
                     }}
                 >{`My Art`}</Typography>
+                <Box
+                    sx={{
+                        width: '200px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                    }}
+                >
+                    <Typography
+                        sx={{
+                            textAlign: 'center',
+                            ...(volume === 0 && { color: '#5E001E' }),
+                            ...(volume > 0 && { color: '#E0C8E8' }),
+                            fontFamily: 'Goldman-Regular',
+                        }}
+                    >
+                        {volume === 0 ? 'Volume Off' : 'Volume On'}
+                    </Typography>
+                    <Slider
+                        sx={{ color: '#C924E9', height: '3px' }}
+                        onChange={(e, newValue) => {
+                            setVolume(newValue);
+                        }}
+                    />
+                    <Button
+                        variant='text'
+                        sx={{
+                            fontSize: '0.8rem',
+                            ...(volume === 0 && { color: '#5E001E' }),
+                            ...(volume > 0 && { color: '#E0C8E8' }),
+                            fontFamily: 'Goldman-Regular',
+                        }}
+                        onClick={() => {
+                            if (volume === 100) {
+                                setVolume(0);
+                                document.getElementById(
+                                    'volume-level'
+                                ).style.width = '0%';
+                            } else if (volume < 100) {
+                                setVolume(100);
+                                document.getElementById(
+                                    'volume-level'
+                                ).style.width = '100%';
+                            }
+                        }}
+                    >
+                        {volume < 100 ? `Turn Volume Up` : 'Turn Volume Down'}
+                    </Button>
+                    <Box
+                        sx={{
+                            backgroundColor: '#5E001E',
+                            borderRadius: '1.5px',
+                            height: '3px',
+                            width: '100%',
+                        }}
+                    >
+                        <Box
+                            id='volume-level'
+                            sx={{
+                                backgroundColor: '#C924E9',
+                                borderRadius: '1.5px',
+                                height: '3px',
+                                width: '0%',
+                                transition: 'width 0.5s ease-in-out',
+                            }}
+                        ></Box>
+                    </Box>
+                </Box>
             </Box>
+
             <Box
                 sx={{
                     width: '800px',
@@ -44,6 +121,7 @@ function ArtSection() {
                 {new Array(12).fill(0).map((_, index) => (
                     <VideoCard
                         key={index}
+                        volume={volume}
                         videoName={`video${index + 1}`}
                         videoFormat={'mp4'}
                         coverName={`video${index + 1}Cover.png`}
