@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
@@ -19,4 +23,11 @@ body {
     font-family: 'Bangers';
     src: local('Bangers'),
         url(/public/fonts/Bangers/Bangers-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: local('Cinzel'),
+        url(/public/fonts/Cinzel/Cinzel-VariableFont_wght.ttf)
+            format('truetype');
 }

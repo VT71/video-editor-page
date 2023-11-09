@@ -6,13 +6,13 @@ import './index.css';
 // @mui
 import { Box, Typography, Link } from '@mui/material';
 
-function NavMenuLink({ text }) {
+function NavMenuLink({ text, to }) {
     console.log('TEXT: ' + text);
     if (text) {
         return (
             <Box>
                 <Link
-                    href='#'
+                    href={to}
                     underline='none'
                     sx={{
                         transition: 'all 0.2s ease-in-out',

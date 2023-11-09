@@ -148,6 +148,7 @@ function IntroSection() {
                         >{`my work`}</Typography>
                         <IconButton
                             sx={{ padding: '0', ':hover': { color: 'white' } }}
+                            href={'./#art-section'}
                         >
                             <ArrowBackIosNewRoundedIcon
                                 sx={{

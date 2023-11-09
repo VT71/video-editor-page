@@ -12,6 +12,7 @@ function ArtSection() {
 
     return (
         <Box
+            id='art-section'
             sx={{
                 width: '100%',
                 backgroundColor: '#15001B',
@@ -28,6 +29,7 @@ function ArtSection() {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
+                    rowGap: '1.5rem',
                 }}
             >
                 <Typography
@@ -46,7 +48,7 @@ function ArtSection() {
                         alignItems: 'center',
                     }}
                 >
-                    <Typography
+                    {/* <Typography
                         sx={{
                             textAlign: 'center',
                             ...(volume === 0 && { color: '#5E001E' }),
@@ -61,7 +63,7 @@ function ArtSection() {
                         onChange={(e, newValue) => {
                             setVolume(newValue);
                         }}
-                    />
+                    /> */}
                     <Button
                         variant='text'
                         sx={{
@@ -84,7 +86,7 @@ function ArtSection() {
                             }
                         }}
                     >
-                        {volume < 100 ? `Turn Volume Up` : 'Turn Volume Down'}
+                        {volume < 100 ? `Volume Off` : 'Volume On'}
                     </Button>
                     <Box
                         sx={{

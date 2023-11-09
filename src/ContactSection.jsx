@@ -6,15 +6,17 @@ import { Box, Typography } from '@mui/material';
 function ContactSection() {
     return (
         <Box
+            id='contact-section'
             sx={{
                 width: '100%',
-                backgroundColor: '#15001B',
+                backgroundColor: '#0F0F0F',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 boxSizing: 'boder-box',
                 rowGap: '3.5rem',
-                paddingY: '4rem',
+                paddingTop: '2rem',
+                paddingBottom: '4rem',
             }}
         >
             <Box>
@@ -26,6 +28,76 @@ function ContactSection() {
                         fontFamily: 'Bangers',
                     }}
                 >{`Get In Touch`}</Typography>
+            </Box>
+            <Box
+                sx={{
+                    display: 'flex',
+                    alignItems: 'cenet',
+                    columnGap: '2rem',
+                }}
+            >
+                <Box
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        columnGap: '0.5rem',
+                    }}
+                >
+                    <Box
+                        sx={{
+                            width: '24px',
+                            height: '24px',
+                            backgroundImage:
+                                'url("./images/instagramLogo.png")',
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                            transition: 'scale 0.5s ease',
+                            cursor: 'pointer',
+                            ':hover': {
+                                scale: '1.08',
+                            },
+                        }}
+                    ></Box>
+                    <Typography
+                        sx={{
+                            fontFamily: 'Cinzel',
+                            color: '#E0C8E8',
+                            fontSize: '1.25rem',
+                        }}
+                    >{`KRIS_EFD`}</Typography>
+                </Box>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        columnGap: '0.5rem',
+                    }}
+                >
+                    <Box
+                        sx={{
+                            width: '24px',
+                            height: '24px',
+                            backgroundImage:
+                                'url("./images/pinterestLogo.png")',
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                            transition: 'scale 0.5s ease',
+                            cursor: 'pointer',
+                            ':hover': {
+                                scale: '1.08',
+                            },
+                        }}
+                    ></Box>
+                    <Typography
+                        sx={{
+                            fontFamily: 'Cinzel',
+                            color: '#E0C8E8',
+                            fontSize: '1.25rem',
+                        }}
+                    >{`KRIS_EFD`}</Typography>
+                </Box>
             </Box>
         </Box>
     );
