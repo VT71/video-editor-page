@@ -9,25 +9,25 @@ body {
 @font-face {
     font-family: 'Goldman-Regular';
     src: local('Goldman-Regular'),
-        url(/public/fonts/Goldman/Goldman-Regular.ttf) format('truetype');
+        url(./fonts/Goldman/Goldman-Regular.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'KaushanScript-Regular';
     src: local('KaushanScript-Regular'),
-        url(/public/fonts/Kaushan_Script/KaushanScript-Regular.ttf)
+        url(./fonts/Kaushan_Script/KaushanScript-Regular.ttf)
             format('truetype');
 }
 
 @font-face {
     font-family: 'Bangers';
     src: local('Bangers'),
-        url(/public/fonts/Bangers/Bangers-Regular.ttf) format('truetype');
+        url(./fonts/Bangers/Bangers-Regular.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'Cinzel';
     src: local('Cinzel'),
-        url(/public/fonts/Cinzel/Cinzel-VariableFont_wght.ttf)
+        url(./fonts/Cinzel/Cinzel-VariableFont_wght.ttf)
             format('truetype');
 }
