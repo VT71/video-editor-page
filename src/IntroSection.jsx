@@ -18,12 +18,15 @@ function IntroSection() {
                 maxHeight: '750px',
                 overflow: 'hidden',
                 position: 'relative',
+                backgroundColor: '#0F0F0F',
             }}
         >
             <Box
                 sx={{
                     width: '100%',
                     height: '100%',
+                    display: 'flex',
+                    justifyContent: 'center',
                 }}
             >
                 <video
@@ -34,12 +37,15 @@ function IntroSection() {
                         // left: '50%',
                         // top: '50%',
                         // transform: 'translateX(-50%) translateY(-50%)',
-                        maxHeight: '100%',
+                        maxWidth: '100%',
                         width: 'auto',
                         height: 'auto',
                     }}
                 >
-                    <source src='./videos/introVideo.mp4' type='video/mp4' />
+                    <source
+                        src={`${require('./assets/videos/introVideo.mp4')}`}
+                        type='video/mp4'
+                    />
                 </video>
             </Box>
             <Box
@@ -100,8 +106,7 @@ function IntroSection() {
                                 sx={{
                                     width: '24px',
                                     height: '24px',
-                                    backgroundImage:
-                                        'url("./images/instagramLogo.png")',
+                                    backgroundImage: `url("${require('./assets/images/instagramLogo.png')}")`,
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: 'center',
@@ -116,8 +121,7 @@ function IntroSection() {
                                 sx={{
                                     width: '24px',
                                     height: '24px',
-                                    backgroundImage:
-                                        'url("./images/pinterestLogo.png")',
+                                    backgroundImage: `url("${require('./assets/images/pinterestLogo.png')}")`,
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: 'center',

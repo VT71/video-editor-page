@@ -83,7 +83,7 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                         sx={{
                             width: '24px',
                             height: '24px',
-                            backgroundImage: `url("./images/instagramLogo.png")`,
+                            backgroundImage: `url("${require('./assets/images/instagramLogo.png')}")`,
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'center',
@@ -98,8 +98,7 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                         sx={{
                             width: '24px',
                             height: '24px',
-                            backgroundImage:
-                                'url("./images/pinterestLogo.png")',
+                            backgroundImage: `url("${require('./assets/images/pinterestLogo.png')}")`,
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'center',
@@ -120,7 +119,8 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                         overflow: 'hidden',
                         boxShadow: '0 0 25px -5px #FFFFFF',
                         transition: 'all 0.8s ease',
-                        backgroundImage: `url(./images/${coverName})`,
+                        backgroundImage: `url("${require('./assets/images/' +
+                            coverName)}")`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
@@ -156,7 +156,10 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                             }}
                         >
                             <source
-                                src={`/videos/${videoName}.${videoFormat}`}
+                                src={`${require('./assets/videos/' +
+                                    videoName +
+                                    '.' +
+                                    videoFormat)}`}
                                 type={`video/${videoFormat}`}
                             />
                         </video>
