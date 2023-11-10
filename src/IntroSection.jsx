@@ -104,8 +104,7 @@ function IntroSection() {
                                         sx={{
                                             width: '24px',
                                             height: '24px',
-                                            backgroundImage:
-                                                'url("./images/instagramLogo.png")',
+                                            backgroundImage: `url("${require('./assets/images/instagramLogo.png')}")`,
                                             backgroundSize: 'cover',
                                             backgroundRepeat: 'no-repeat',
                                             backgroundPosition: 'center',
@@ -118,9 +117,6 @@ function IntroSection() {
                                                 scale: '0.95',
                                             },
                                         }}
-                                        href={
-                                            'https://instagram.com/kris.esfd?igshid=NzZlODBkYWE4Ng=='
-                                        }
                                     ></Box>
                                 </Link>
                                 <Link href={''} target='_blank'>
@@ -128,8 +124,7 @@ function IntroSection() {
                                         sx={{
                                             width: '24px',
                                             height: '24px',
-                                            backgroundImage:
-                                                'url("./images/pinterestLogo.png")',
+                                            backgroundImage: `url("${require('./assets/images/pinterestLogo.png')}")`,
                                             backgroundSize: 'cover',
                                             backgroundRepeat: 'no-repeat',
                                             backgroundPosition: 'center',
