@@ -1,20 +1,32 @@
 {
   "files": {
     "main.css": "/video-editor-page/static/css/main.463cebf4.css",
-    "main.js": "/video-editor-page/static/js/main.d945398f.js",
-    "static/media/video9Cover.png": "/video-editor-page/static/media/video9Cover.51b8f5645fc216bd9364.png",
-    "static/media/video7Cover.png": "/video-editor-page/static/media/video7Cover.4440f20a64b1ee2befee.png",
-    "static/media/video12Cover.png": "/video-editor-page/static/media/video12Cover.a5bd94641a091e07b305.png",
-    "static/media/video3Cover.png": "/video-editor-page/static/media/video3Cover.1cc96cea64b8a581e039.png",
-    "static/media/video11Cover.png": "/video-editor-page/static/media/video11Cover.02e4cbb2c9cee99b9e05.png",
-    "static/media/video8Cover.png": "/video-editor-page/static/media/video8Cover.e38bffaa0846ddef08a1.png",
-    "static/media/video2Cover.png": "/video-editor-page/static/media/video2Cover.c82d502e90d2ba22e10e.png",
-    "static/media/video4Cover.png": "/video-editor-page/static/media/video4Cover.ed3c1cbdc728d4889420.png",
+    "main.js": "/video-editor-page/static/js/main.f6ac8a40.js",
+    "static/media/video6.mp4": "/video-editor-page/static/media/video6.4628d961986bea36c8f5.mp4",
+    "static/media/video10.mp4": "/video-editor-page/static/media/video10.cbdcc8291bdc5ad85058.mp4",
+    "static/media/video11.mp4": "/video-editor-page/static/media/video11.de2c2214462b679ab745.mp4",
+    "static/media/video12.mp4": "/video-editor-page/static/media/video12.e0d7b454e08ee3c1fb22.mp4",
+    "static/media/video1.mp4": "/video-editor-page/static/media/video1.35ff13dabc4651fdadbd.mp4",
+    "static/media/video4.mp4": "/video-editor-page/static/media/video4.31e903a2f1b7b0516f50.mp4",
+    "static/media/video8.mp4": "/video-editor-page/static/media/video8.18f5308a690653dbbea7.mp4",
+    "static/media/video7.mp4": "/video-editor-page/static/media/video7.11a29d02157b8dc70266.mp4",
+    "static/media/video9.mp4": "/video-editor-page/static/media/video9.83aa0372b262137b76aa.mp4",
+    "static/media/video3.mp4": "/video-editor-page/static/media/video3.72942fc383e008fc7b89.mp4",
+    "static/media/video2.mp4": "/video-editor-page/static/media/video2.dab8586ff4a6568b459c.mp4",
+    "static/media/video5.mp4": "/video-editor-page/static/media/video5.13913db53a6464d24eaa.mp4",
     "static/media/introVideo.mp4": "/video-editor-page/static/media/introVideo.28442d570d2a0c1008ec.mp4",
-    "static/media/video10Cover.png": "/video-editor-page/static/media/video10Cover.2268d061a81b9d085d73.png",
-    "static/media/video1Cover.png": "/video-editor-page/static/media/video1Cover.ee0f1003e594376f3eb4.png",
-    "static/media/video5Cover.png": "/video-editor-page/static/media/video5Cover.51ef8bfe0eb654fb0f8d.png",
-    "static/media/video6Cover.png": "/video-editor-page/static/media/video6Cover.ac5e293a6211559b9e79.png",
+    "static/media/video7Cover.png": "/video-editor-page/static/media/video7Cover.4f1b48e2f955390e8bb8.png",
+    "static/media/video12Cover.png": "/video-editor-page/static/media/video12Cover.e7a5cd2f1e44e484dc27.png",
+    "static/media/video3Cover.png": "/video-editor-page/static/media/video3Cover.1bc3270447620bb74cc8.png",
+    "static/media/video9Cover.png": "/video-editor-page/static/media/video9Cover.65d09a8055b314f07ae9.png",
+    "static/media/video6Cover.png": "/video-editor-page/static/media/video6Cover.5ae9e20dc35c1adb6e02.png",
+    "static/media/video4Cover.png": "/video-editor-page/static/media/video4Cover.ef20aad0bbd4ad986f18.png",
+    "static/media/video11Cover.png": "/video-editor-page/static/media/video11Cover.e2a564c67cd7c6d00ed9.png",
+    "static/media/video10Cover.png": "/video-editor-page/static/media/video10Cover.8f6f3cca4ba13196669d.png",
+    "static/media/video5Cover.png": "/video-editor-page/static/media/video5Cover.10dce24f301adc5e8486.png",
+    "static/media/video8Cover.png": "/video-editor-page/static/media/video8Cover.933c04578805974064ce.png",
+    "static/media/video2Cover.png": "/video-editor-page/static/media/video2Cover.c5d71bcf3c0fb949e1b7.png",
+    "static/media/video1Cover.png": "/video-editor-page/static/media/video1Cover.9f6e1081182bc53a9de3.png",
     "static/media/instagramLogo.png": "/video-editor-page/static/media/instagramLogo.bb8a77bfaa323012e852.png",
     "static/media/KaushanScript-Regular.ttf": "/video-editor-page/static/media/KaushanScript-Regular.a668b3d996f7c50fb3fe.ttf",
     "static/media/Cinzel-VariableFont_wght.ttf": "/video-editor-page/static/media/Cinzel-VariableFont_wght.2d087b545bf495f3d86d.ttf",
@@ -22,10 +34,10 @@
     "static/media/Goldman-Regular.ttf": "/video-editor-page/static/media/Goldman-Regular.93b3965cf4c8f6ce3e4b.ttf",
     "index.html": "/video-editor-page/index.html",
     "main.463cebf4.css.map": "/video-editor-page/static/css/main.463cebf4.css.map",
-    "main.d945398f.js.map": "/video-editor-page/static/js/main.d945398f.js.map"
+    "main.f6ac8a40.js.map": "/video-editor-page/static/js/main.f6ac8a40.js.map"
   },
   "entrypoints": [
     "static/css/main.463cebf4.css",
-    "static/js/main.d945398f.js"
+    "static/js/main.f6ac8a40.js"
   ]
 }
