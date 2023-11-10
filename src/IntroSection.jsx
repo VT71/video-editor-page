@@ -119,7 +119,10 @@ function IntroSection() {
                                         }}
                                     ></Box>
                                 </Link>
-                                <Link href={''} target='_blank'>
+                                <Link
+                                    href={'https://pin.it/54H5UAw'}
+                                    target='_blank'
+                                >
                                     <Box
                                         sx={{
                                             width: '24px',
