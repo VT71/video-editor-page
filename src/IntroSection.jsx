@@ -185,7 +185,8 @@ function IntroSection() {
                         // left: '50%',
                         // top: '50%',
                         // transform: 'translateX(-50%) translateY(-50%)',
-                        maxWidth: '100%',
+                        maxHeight: '100%',
+                        // maxWidth: '100%',
                         width: 'auto',
                         height: 'auto',
                     }}
