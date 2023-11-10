@@ -7,7 +7,6 @@ import './index.css';
 import { Box, Typography, Link } from '@mui/material';
 
 function NavMenuLink({ text, to }) {
-    console.log('TEXT: ' + text);
     if (text) {
         return (
             <Box>
