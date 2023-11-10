@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRef } from 'react';
 
 // @mui
@@ -7,8 +7,10 @@ import { Box } from '@mui/material';
 function VideoCard({ volume, videoName, videoFormat, coverName }) {
     const isPlaying = useRef(false);
 
+    const [sourceRequested, setSourceRequested] = useState(false);
+
     const handleMouseOver = () => {
-        console.log('mouse over');
+        setSourceRequested(true);
         document.getElementById(`${videoName}-layer`).style.backgroundColor =
             'rgba(0,0,0,0)';
         document.getElementById(`${videoName}`).style.zIndex = '1';
@@ -92,6 +94,9 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                             ':hover': {
                                 scale: '1.08',
                             },
+                            ':active': {
+                                scale: '0.95',
+                            },
                         }}
                     ></Box>
                     <Box
@@ -106,6 +111,9 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                             cursor: 'pointer',
                             ':hover': {
                                 scale: '1.08',
+                            },
+                            ':active': {
+                                scale: '0.95',
                             },
                         }}
                     ></Box>
@@ -155,13 +163,12 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                                 height: 'auto',
                             }}
                         >
-                            <source
-                                src={`${require('./assets/videos/' +
-                                    videoName +
-                                    '.' +
-                                    videoFormat)}`}
-                                type={`video/${videoFormat}`}
-                            />
+                            {sourceRequested ? (
+                                <source
+                                    src={`/videos/${videoName}.${videoFormat}`}
+                                    type={`video/${videoFormat}`}
+                                />
+                            ) : null}
                         </video>
                     </Box>
                     <Box
