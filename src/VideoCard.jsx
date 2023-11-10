@@ -165,7 +165,10 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                         >
                             {sourceRequested ? (
                                 <source
-                                    src={`/videos/${videoName}.${videoFormat}`}
+                                    src={`${require('./assets/videos/' +
+                                        videoName +
+                                        '.' +
+                                        videoFormat)}`}
                                     type={`video/${videoFormat}`}
                                 />
                             ) : null}
