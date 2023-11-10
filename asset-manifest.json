@@ -1,16 +1,31 @@
 {
   "files": {
-    "main.css": "/video-editor-page/static/css/main.cd3f928e.css",
-    "main.js": "/video-editor-page/static/js/main.56721f16.js",
+    "main.css": "/video-editor-page/static/css/main.463cebf4.css",
+    "main.js": "/video-editor-page/static/js/main.d945398f.js",
+    "static/media/video9Cover.png": "/video-editor-page/static/media/video9Cover.51b8f5645fc216bd9364.png",
+    "static/media/video7Cover.png": "/video-editor-page/static/media/video7Cover.4440f20a64b1ee2befee.png",
+    "static/media/video12Cover.png": "/video-editor-page/static/media/video12Cover.a5bd94641a091e07b305.png",
+    "static/media/video3Cover.png": "/video-editor-page/static/media/video3Cover.1cc96cea64b8a581e039.png",
+    "static/media/video11Cover.png": "/video-editor-page/static/media/video11Cover.02e4cbb2c9cee99b9e05.png",
+    "static/media/video8Cover.png": "/video-editor-page/static/media/video8Cover.e38bffaa0846ddef08a1.png",
+    "static/media/video2Cover.png": "/video-editor-page/static/media/video2Cover.c82d502e90d2ba22e10e.png",
+    "static/media/video4Cover.png": "/video-editor-page/static/media/video4Cover.ed3c1cbdc728d4889420.png",
+    "static/media/introVideo.mp4": "/video-editor-page/static/media/introVideo.28442d570d2a0c1008ec.mp4",
+    "static/media/video10Cover.png": "/video-editor-page/static/media/video10Cover.2268d061a81b9d085d73.png",
+    "static/media/video1Cover.png": "/video-editor-page/static/media/video1Cover.ee0f1003e594376f3eb4.png",
+    "static/media/video5Cover.png": "/video-editor-page/static/media/video5Cover.51ef8bfe0eb654fb0f8d.png",
+    "static/media/video6Cover.png": "/video-editor-page/static/media/video6Cover.ac5e293a6211559b9e79.png",
+    "static/media/instagramLogo.png": "/video-editor-page/static/media/instagramLogo.bb8a77bfaa323012e852.png",
     "static/media/KaushanScript-Regular.ttf": "/video-editor-page/static/media/KaushanScript-Regular.a668b3d996f7c50fb3fe.ttf",
+    "static/media/Cinzel-VariableFont_wght.ttf": "/video-editor-page/static/media/Cinzel-VariableFont_wght.2d087b545bf495f3d86d.ttf",
     "static/media/Bangers-Regular.ttf": "/video-editor-page/static/media/Bangers-Regular.f0f1f39c39ee2df57fd7.ttf",
     "static/media/Goldman-Regular.ttf": "/video-editor-page/static/media/Goldman-Regular.93b3965cf4c8f6ce3e4b.ttf",
     "index.html": "/video-editor-page/index.html",
-    "main.cd3f928e.css.map": "/video-editor-page/static/css/main.cd3f928e.css.map",
-    "main.56721f16.js.map": "/video-editor-page/static/js/main.56721f16.js.map"
+    "main.463cebf4.css.map": "/video-editor-page/static/css/main.463cebf4.css.map",
+    "main.d945398f.js.map": "/video-editor-page/static/js/main.d945398f.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd3f928e.css",
-    "static/js/main.56721f16.js"
+    "static/css/main.463cebf4.css",
+    "static/js/main.d945398f.js"
   ]
 }
