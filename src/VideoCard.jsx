@@ -205,6 +205,7 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                         <video
                             muted={volume ? false : true}
                             id={`${videoName}`}
+                            disablePictureInPicture={true}
                             style={{
                                 position: 'absolute',
                                 zIndex: '-1',
