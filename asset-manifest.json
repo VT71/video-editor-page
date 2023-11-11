@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/video-editor-page/static/css/main.463cebf4.css",
-    "main.js": "/video-editor-page/static/js/main.2c44d21c.js",
+    "main.js": "/video-editor-page/static/js/main.b0d0ec3e.js",
     "static/media/video6.mp4": "/video-editor-page/static/media/video6.4628d961986bea36c8f5.mp4",
     "static/media/video10.mp4": "/video-editor-page/static/media/video10.cbdcc8291bdc5ad85058.mp4",
     "static/media/video11.mp4": "/video-editor-page/static/media/video11.de2c2214462b679ab745.mp4",
@@ -34,10 +34,10 @@
     "static/media/Goldman-Regular.ttf": "/video-editor-page/static/media/Goldman-Regular.93b3965cf4c8f6ce3e4b.ttf",
     "index.html": "/video-editor-page/index.html",
     "main.463cebf4.css.map": "/video-editor-page/static/css/main.463cebf4.css.map",
-    "main.2c44d21c.js.map": "/video-editor-page/static/js/main.2c44d21c.js.map"
+    "main.b0d0ec3e.js.map": "/video-editor-page/static/js/main.b0d0ec3e.js.map"
   },
   "entrypoints": [
     "static/css/main.463cebf4.css",
-    "static/js/main.2c44d21c.js"
+    "static/js/main.b0d0ec3e.js"
   ]
 }
