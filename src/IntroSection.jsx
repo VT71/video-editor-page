@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './index.css'
+import './index.css';
 
 // components
 import NavMenu from './NavMenu';
@@ -283,6 +283,8 @@ function IntroSection() {
                     id={'introVideo'}
                     autoPlay
                     muted
+                    disablePictureInPicture={true}
+                    playsInline={true}
                     style={{
                         // position: 'absolute',
                         // left: '50%',
