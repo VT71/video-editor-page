@@ -32,10 +32,17 @@ function App() {
         }, 1000);
     }, []);
 
-    console.log('loading: ' + loading);
     if (loading) {
         return (
-            <div className='App' style={{ position: 'relative' }}>
+            <div
+                className='App'
+                style={{
+                    position: 'relative',
+                    width: '100%',
+                    height: '100vh',
+                    overflow: 'hidden',
+                }}
+            >
                 <IntroSection />
                 <ArtSection />
                 <ContactSection />

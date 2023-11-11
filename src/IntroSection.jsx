@@ -5,17 +5,22 @@ import NavMenu from './NavMenu';
 
 // @mui
 import { Box, IconButton, Typography, Button, Link } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import MenuIcon from '@mui/icons-material/Menu';
 
 // icons
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
+import CloseIcon from '@mui/icons-material/Close';
 
 function IntroSection() {
+    const mobileScreen = useMediaQuery('(max-width: 600px)');
+
     return (
         <Box
             sx={{
                 width: '100%',
                 height: '100vh',
-                maxHeight: '750px',
+                maxHeight: '1000px',
                 overflow: 'hidden',
                 position: 'relative',
                 backgroundColor: '#0F0F0F',
@@ -49,18 +54,105 @@ function IntroSection() {
                         backgroundColor: 'rgba(32, 7, 37, 0.5)',
                     }}
                 >
-                    <Box
-                        sx={{
-                            boxSizing: 'border-box',
-                            width: '100%',
-                            display: 'flex',
-                            justifyContent: 'end',
-                            alignItems: 'center',
-                            padding: '1.2rem 1.5rem',
-                        }}
-                    >
-                        <NavMenu />
-                    </Box>
+                    {mobileScreen && (
+                        <Box
+                            sx={{
+                                width: '100%',
+                                display: 'flex',
+                                justifyContent: 'end',
+                                boxSizing: 'border-box',
+                                padding: '0.5rem 0.5rem',
+                            }}
+                        >
+                            <IconButton
+                                onClick={() => {
+                                    document.getElementById(
+                                        'mobileMenuWrapper'
+                                    ).style.transform = 'translateY(100%)';
+                                }}
+                                sx={{
+                                    zIndex: '2',
+                                    color: '#E0C8E8',
+                                    ':hover': { color: 'white' },
+                                    ':active': {
+                                        scale: '0.95',
+                                        color: 'white',
+                                    },
+                                }}
+                            >
+                                <MenuIcon
+                                    sx={{
+                                        fontSize: '3rem',
+                                    }}
+                                />
+                            </IconButton>
+                        </Box>
+                    )}
+                    {!mobileScreen && (
+                        <Box
+                            sx={{
+                                boxSizing: 'border-box',
+                                width: '100%',
+                                display: 'flex',
+                                justifyContent: 'end',
+                                alignItems: 'center',
+                                padding: '1.2rem 1.5rem',
+                            }}
+                        >
+                            <NavMenu />
+                        </Box>
+                    )}
+                    {mobileScreen && (
+                        <Box
+                            id={'mobileMenuWrapper'}
+                            sx={{
+                                boxSizing: 'border-box',
+                                width: '100%',
+                                height: '100%',
+                                backgroundColor: '#0F0F0F',
+                                position: 'absolute',
+                                top: '-100vh',
+                                zIndex: '2',
+                                transition: 'all 0.5s ease',
+                            }}
+                        >
+                            <Box
+                                sx={{
+                                    width: '100%',
+                                    display: 'flex',
+                                    justifyContent: 'end',
+                                    boxSizing: 'border-box',
+                                    padding: '0.5rem 0.5rem',
+                                }}
+                            >
+                                <IconButton
+                                    onClick={() => {
+                                        document.getElementById(
+                                            'mobileMenuWrapper'
+                                        ).style.transform = 'translateY(-100%)';
+                                    }}
+                                    sx={{
+                                        zIndex: '2',
+                                        color: '#E0C8E8',
+                                        ':hover': { color: 'white' },
+                                        ':active': {
+                                            scale: '0.95',
+                                            color: 'white',
+                                        },
+                                    }}
+                                >
+                                    <CloseIcon
+                                        sx={{
+                                            fontSize: '3rem',
+                                        }}
+                                    />
+                                </IconButton>
+                            </Box>
+
+                            <NavMenu version={'mobile'} />
+                        </Box>
+                    )}
+
                     <Box
                         sx={{
                             display: 'flex',

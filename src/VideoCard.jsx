@@ -15,9 +15,7 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
             'rgba(0,0,0,0)';
         document.getElementById(`${videoName}`).style.zIndex = '1';
         try {
-            console.log('Volume: ' + volume);
             if (volume || volume === 0) {
-                console.log('volume', volume);
                 document.getElementById(`${videoName}`).volume = volume / 100;
             }
             let promise = document.getElementById(`${videoName}`).play();
@@ -27,11 +25,9 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                         isPlaying.current = true;
                     })
                     .catch((err) => {
-                        console.log(err);
                     });
             }
         } catch (err) {
-            console.log(err);
         }
     };
 
