@@ -124,7 +124,7 @@ function ArtSection() {
                         justifyContent: 'center',
                     },
                     '@media (max-width: 499px)': {
-                        rowGap: '3rem',
+                        rowGap: '3.5rem',
                     },
                 }}
             >
