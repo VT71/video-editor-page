@@ -112,12 +112,20 @@ function ArtSection() {
 
             <Box
                 sx={{
-                    width: '800px',
+                    wdith: '100%',
+                    maxWidth: '800px',
                     display: 'flex',
                     justifyContent: 'space-between',
                     columnGap: '3rem',
                     rowGap: '5rem',
                     flexWrap: 'wrap',
+                    paddingX: '1.5rem',
+                    '@media (max-width: 760px)': {
+                        justifyContent: 'center',
+                    },
+                    '@media (max-width: 499px)': {
+                        rowGap: '3rem',
+                    },
                 }}
             >
                 {new Array(12).fill(0).map((_, index) => (

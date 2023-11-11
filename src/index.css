@@ -6,6 +6,30 @@ body {
     margin: 0;
 }
 
+/* @media (min-height: 1080px) {
+    #introVideo {
+        max-height: 100%;
+    }
+}
+
+@media (max-height: 1080px) {
+    #introVideo {
+        max-width: 100%;
+    }
+} */
+
+/* @media (min-height: 800px) {
+    #introVideo {
+        max-height: 100%;
+    }
+}
+
+@media (max-height: 800px) {
+    #introVideo {
+        max-width: 100%;
+    }
+} */
+
 @font-face {
     font-family: 'Goldman-Regular';
     src: local('Goldman-Regular'),
@@ -15,8 +39,7 @@ body {
 @font-face {
     font-family: 'KaushanScript-Regular';
     src: local('KaushanScript-Regular'),
-        url(./fonts/Kaushan_Script/KaushanScript-Regular.ttf)
-            format('truetype');
+        url(./fonts/Kaushan_Script/KaushanScript-Regular.ttf) format('truetype');
 }
 
 @font-face {
@@ -28,6 +51,5 @@ body {
 @font-face {
     font-family: 'Cinzel';
     src: local('Cinzel'),
-        url(./fonts/Cinzel/Cinzel-VariableFont_wght.ttf)
-            format('truetype');
+        url(./fonts/Cinzel/Cinzel-VariableFont_wght.ttf) format('truetype');
 }

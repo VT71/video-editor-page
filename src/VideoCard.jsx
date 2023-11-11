@@ -24,27 +24,44 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                     .then(() => {
                         isPlaying.current = true;
                     })
-                    .catch((err) => {
-                    });
+                    .catch((err) => {});
             }
-        } catch (err) {
-        }
+        } catch (err) {}
     };
 
     const handleMouseOut = () => {
-        document.getElementById(`${videoName}-layer`).style.backgroundColor =
-            'rgba(0,0,0,1)';
-        setTimeout(() => {
-            document.getElementById(`${videoName}`).style.zIndex = '-1';
-            if (isPlaying) {
+        if (isPlaying.current) {
+            document.getElementById(
+                `${videoName}-layer`
+            ).style.backgroundColor = 'rgba(0,0,0,1)';
+            setTimeout(() => {
+                document.getElementById(`${videoName}`).style.zIndex = '-1';
+
                 isPlaying.current = false;
                 document.getElementById(`${videoName}`).pause();
                 document.getElementById(`${videoName}`).currentTime = 0;
                 document.getElementById(
                     `${videoName}-layer`
                 ).style.backgroundColor = 'rgba(0,0,0,0.4)';
-            }
-        }, 500);
+            }, 500);
+        }
+    };
+
+    const handleVideoEnd = (videoName) => {
+        handleMouseOut();
+        document.getElementById(`${videoName}-card`).style = {
+            position: 'relative',
+            width: '100%',
+            height: '100%',
+            overflow: 'hidden',
+            boxShadow: '0 0 25px -5px #FFFFFF',
+            transition: 'all 0.8s ease',
+            backgroundImage: `url("${require('./assets/images/' +
+                coverName)}")`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+        };
     };
 
     if (videoName && videoFormat && coverName) {
@@ -60,6 +77,17 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                     document.getElementById(
                         `${videoName}-socials`
                     ).style.bottom = '0';
+                }}
+                onTouchStart={() => {
+                    if (!isPlaying.current) {
+                        document.getElementById(
+                            `${videoName}-socials`
+                        ).style.bottom = '-40px';
+                    } else {
+                        document.getElementById(
+                            `${videoName}-socials`
+                        ).style.bottom = '0';
+                    }
                 }}
             >
                 <Box
@@ -138,6 +166,35 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                     }}
                     onMouseOver={handleMouseOver}
                     onMouseOut={handleMouseOut}
+                    onTouchStart={() => {
+                        if (!isPlaying.current) {
+                            handleMouseOver();
+                            document.getElementById(`${videoName}-card`).style =
+                                '0 0 25px 2px #FFFFFF';
+                            document.getElementById(
+                                `${videoName}-card`
+                            ).style.backgroundImage = 'none';
+                            document.getElementById(
+                                `${videoName}-card`
+                            ).style.scale = '1.05';
+                        } else {
+                            handleMouseOut();
+                            document.getElementById(`${videoName}-card`).style =
+                                {
+                                    position: 'relative',
+                                    width: '100%',
+                                    height: '100%',
+                                    overflow: 'hidden',
+                                    boxShadow: '0 0 25px -5px #FFFFFF',
+                                    transition: 'all 0.8s ease',
+                                    backgroundImage: `url("${require('./assets/images/' +
+                                        coverName)}")`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    backgroundRepeat: 'no-repeat',
+                                };
+                        }
+                    }}
                 >
                     <Box
                         sx={{
@@ -157,6 +214,9 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                                 maxWidth: '100%',
                                 width: 'auto',
                                 height: 'auto',
+                            }}
+                            onEnded={() => {
+                                handleVideoEnd(videoName);
                             }}
                         >
                             {sourceRequested ? (

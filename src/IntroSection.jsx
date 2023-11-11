@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './index.css'
 
 // components
 import NavMenu from './NavMenu';
@@ -168,6 +169,9 @@ function IntroSection() {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
+                                ...(mobileScreen && {
+                                    rowGap: '0.5rem',
+                                }),
                             }}
                         >
                             <Box>
@@ -177,6 +181,9 @@ function IntroSection() {
                                         color: '#E0C8E8',
                                         fontSize: '3.6rem',
                                         textShadow: '0px 2px 10px #5E001E',
+                                        ...(mobileScreen && {
+                                            fontSize: '2.8rem',
+                                        }),
                                     }}
                                 >{`KRIS_ESFD`}</Typography>
                             </Box>
@@ -273,6 +280,7 @@ function IntroSection() {
                 </Box>
 
                 <video
+                    id={'introVideo'}
                     autoPlay
                     muted
                     style={{
@@ -280,10 +288,9 @@ function IntroSection() {
                         // left: '50%',
                         // top: '50%',
                         // transform: 'translateX(-50%) translateY(-50%)',
-                        maxHeight: '100%',
-                        // maxWidth: '100%',
                         width: 'auto',
                         height: 'auto',
+                        maxHeight: '100%',
                     }}
                 >
                     <source
