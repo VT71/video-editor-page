@@ -96,7 +96,7 @@ function IntroSection() {
                                 boxSizing: 'border-box',
                                 width: '100%',
                                 display: 'flex',
-                                justifyContent: 'space-between',
+                                justifyContent: 'end',
                                 alignItems: 'center',
                                 padding: '1.2rem 1.5rem',
                             }}
