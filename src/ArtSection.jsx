@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './index.css';
 
 // @mui
@@ -9,6 +9,19 @@ import VideoCard from './VideoCard';
 
 function ArtSection() {
     const [volume, setVolume] = useState(0);
+    const nameButtonColor = useRef('#C924E9');
+
+    // setInterval(() => {
+    //     if (nameButtonColor.current === '#C924E9') {
+    //         nameButtonColor.current = '#5E001E';
+    //         document.getElementById('creator-name-button').style.color =
+    //             '#5E001E';
+    //     } else {
+    //         nameButtonColor.current = '#C924E9';
+    //         document.getElementById('creator-name-button').style.color =
+    //             '#C924E9';
+    //     }
+    // }, 500);
 
     return (
         <Box
@@ -21,9 +34,51 @@ function ArtSection() {
                 alignItems: 'center',
                 boxSizing: 'boder-box',
                 rowGap: '3.5rem',
-                paddingY: '4rem',
+                paddingBottom: '4rem',
             }}
         >
+            <Box
+                sx={{
+                    width: '100%',
+                    overflow: 'hidden',
+                    marinBottom: '4rem',
+                    boxSizing: 'border-box',
+                    paddingY: '0.5rem',
+                    backgroundColor: '#0F0F0F',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }}
+            >
+                <Typography
+                    sx={{
+                        textAlign: 'center',
+                        fontFamily: 'Goldman-Regular',
+                        color: '#E0C8E8',
+                        fontSize: '0.8rem',
+                    }}
+                >{`Website created by `}</Typography>
+                <Button
+                    id={'creator-name-button'}
+                    variant='text'
+                    sx={{
+                        fontFamily: 'Goldman-Regular',
+                        color: '#5E001E',
+                        fontSize: '0.8rem',
+                        textTransform: 'none',
+                        paddingX: '0.3rem',
+                        minWidth: 'fit-content',
+                        transition: 'all 0.5s ease-in-out',
+                        ':hover': {
+                            color: '#C924E9',
+                        },
+                    }}
+                    href='https://www.upwork.com/freelancers/victortoma6'
+                    target='_blank'
+                >
+                    Victor Toma.
+                </Button>
+            </Box>
             <Box
                 sx={{
                     display: 'flex',
