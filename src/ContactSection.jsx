@@ -19,7 +19,7 @@ function ContactSection() {
                 boxSizing: 'boder-box',
                 rowGap: '3.5rem',
                 paddingTop: '2rem',
-                paddingBottom: '4rem',
+                paddingBottom: '2rem',
             }}
         >
             <Box>
@@ -126,6 +126,16 @@ function ContactSection() {
                         >{`krisesfd11@gmail.com`}</Typography>
                     </Box>
                 </Box>
+                <Typography
+                    sx={{
+                        textAlign: 'center',
+                        fontFamily: 'Goldman-Regular',
+                        color: '#E0C8E8',
+                        marginTop: '1.2rem',
+                        marginBottom: '1rem',
+                        fontSize: '0.8rem',
+                    }}
+                >{`© Victor Toma. All Rights Reserved.`}</Typography>
             </Box>
         </Box>
     );
