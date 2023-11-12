@@ -15,6 +15,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 function IntroSection() {
     const mobileScreen = useMediaQuery('(max-width: 600px)');
+    const screenLessThan550 = useMediaQuery('(max-width: 550px)');
 
     return (
         <Box
@@ -293,10 +294,17 @@ function IntroSection() {
                         maxHeight: '100%',
                     }}
                 >
-                    <source
-                        src={`${require('./assets/videos/introVideo.mp4')}`}
-                        type='video/mp4'
-                    />
+                    {!screenLessThan550 ? (
+                        <source
+                            src={`${require('./assets/videos/introVideo.mp4')}`}
+                            type='video/mp4'
+                        />
+                    ) : (
+                        <source
+                            src={`${require('./assets/videos/introVideo2.mp4')}`}
+                            type='video/mp4'
+                        />
+                    )}
                 </video>
             </Box>
 
