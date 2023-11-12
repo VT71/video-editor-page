@@ -6,6 +6,11 @@ body {
     margin: 0;
 }
 
+.video-card:hover {
+    box-shadow: '0 0 25px 2px #FFFFFF';
+    background: 'none';
+    scale: '1.05';
+}
 /* @media (min-height: 1080px) {
     #introVideo {
         max-height: 100%;

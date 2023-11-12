@@ -3,6 +3,9 @@ import React from 'react';
 // @mui
 import { Box, Typography } from '@mui/material';
 
+// icons
+import EmailIcon from '@mui/icons-material/Email';
+
 function ContactSection() {
     return (
         <Box
@@ -32,69 +35,96 @@ function ContactSection() {
             <Box
                 sx={{
                     display: 'flex',
-                    alignItems: 'cenet',
-                    columnGap: '2rem',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    rowGap: '1.8rem',
                 }}
             >
                 <Box
                     sx={{
                         display: 'flex',
-                        alignItems: 'center',
-                        columnGap: '0.5rem',
+                        alignItems: 'cenet',
+                        columnGap: '3rem',
                     }}
                 >
                     <Box
                         sx={{
-                            width: '24px',
-                            height: '24px',
-                            backgroundImage: `url("${require('./assets/images/instagramLogo.png')}")`,
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundPosition: 'center',
-                            transition: 'scale 0.5s ease',
-                            cursor: 'pointer',
-                            ':hover': {
-                                scale: '1.08',
-                            },
+                            display: 'flex',
+                            alignItems: 'center',
+                            columnGap: '0.5rem',
                         }}
-                    ></Box>
-                    <Typography
+                    >
+                        <Box
+                            sx={{
+                                width: '24px',
+                                height: '24px',
+                                backgroundImage: `url("${require('./assets/images/instagramLogo.png')}")`,
+                                backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundPosition: 'center',
+                                transition: 'scale 0.5s ease',
+                                cursor: 'pointer',
+                                ':hover': {
+                                    scale: '1.08',
+                                },
+                            }}
+                        ></Box>
+                        <Typography
+                            sx={{
+                                fontFamily: 'Cinzel',
+                                color: '#E0C8E8',
+                                fontSize: '1.25rem',
+                            }}
+                        >{`KRIS_EFD`}</Typography>
+                    </Box>
+                    <Box
                         sx={{
-                            fontFamily: 'Cinzel',
-                            color: '#E0C8E8',
-                            fontSize: '1.25rem',
+                            display: 'flex',
+                            alignItems: 'center',
+                            columnGap: '0.5rem',
                         }}
-                    >{`KRIS_EFD`}</Typography>
+                    >
+                        <Box
+                            sx={{
+                                width: '24px',
+                                height: '24px',
+                                backgroundImage: `url("${require('./assets/images/pinterestLogo.png')}")`,
+                                backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundPosition: 'center',
+                                transition: 'scale 0.5s ease',
+                                cursor: 'pointer',
+                                ':hover': {
+                                    scale: '1.08',
+                                },
+                            }}
+                        ></Box>
+                        <Typography
+                            sx={{
+                                fontFamily: 'Cinzel',
+                                color: '#E0C8E8',
+                                fontSize: '1.25rem',
+                            }}
+                        >{`KRIS_EFD`}</Typography>
+                    </Box>
                 </Box>
-                <Box
-                    sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        columnGap: '0.5rem',
-                    }}
-                >
+                <Box>
                     <Box
                         sx={{
-                            width: '24px',
-                            height: '24px',
-                            backgroundImage: `url("${require('./assets/images/pinterestLogo.png')}")`,
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundPosition: 'center',
-                            transition: 'scale 0.5s ease',
-                            cursor: 'pointer',
-                            ':hover': {
-                                scale: '1.08',
-                            },
+                            display: 'flex',
+                            alignItems: 'center',
+                            columnGap: '0.5rem',
                         }}
-                    ></Box>
-                    <Typography
-                        sx={{
-                            fontFamily: 'Cinzel',
-                            color: '#E0C8E8',
-                            fontSize: '1.25rem',
-                        }}
-                    >{`KRIS_EFD`}</Typography>
+                    >
+                        <EmailIcon sx={{ fontSize: '28px', color: '#fff' }} />
+                        <Typography
+                            sx={{
+                                fontFamily: 'Cinzel',
+                                color: '#E0C8E8',
+                                fontSize: '1.25rem',
+                            }}
+                        >{`krisesfd11@gmail.com`}</Typography>
+                    </Box>
                 </Box>
             </Box>
         </Box>

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRef } from 'react';
+import './index.css';
 
 // @mui
 import { Box } from '@mui/material';
@@ -8,6 +9,19 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
     const isPlaying = useRef(false);
 
     const [sourceRequested, setSourceRequested] = useState(false);
+
+    const videoCardStyle = {
+        position: 'relative',
+        width: '100%',
+        height: '100%',
+        overflow: 'hidden',
+        boxShadow: '0 0 25px -5px #FFFFFF',
+        transition: 'all 0.8s ease',
+        backgroundImage: `url("${require('./assets/images/' + coverName)}")`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+    };
 
     const handleMouseOver = () => {
         setSourceRequested(true);
@@ -30,6 +44,7 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
     };
 
     const handleMouseOut = () => {
+        console.log('mouse out, playing? : ' + isPlaying.current);
         if (isPlaying.current) {
             document.getElementById(
                 `${videoName}-layer`
@@ -48,21 +63,15 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
     };
 
     const handleVideoEnd = (videoName) => {
+        console.log('video ended');
         handleMouseOut();
-        document.getElementById(`${videoName}-card`).style = {
-            position: 'relative',
-            width: '100%',
-            height: '100%',
-            overflow: 'hidden',
-            boxShadow: '0 0 25px -5px #FFFFFF',
-            transition: 'all 0.8s ease',
-            backgroundImage: `url("${require('./assets/images/' +
-                coverName)}")`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-        };
+        document.getElementById(`${videoName}-socials`).style.bottom = '0';
+        document.getElementById(`${videoName}-card`).style = videoCardStyle;
     };
+
+    useEffect(() => {
+        document.getElementById(`${videoName}`).volume = volume / 100;
+    }, [volume]);
 
     if (videoName && videoFormat && coverName) {
         return (
@@ -77,6 +86,8 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                     document.getElementById(
                         `${videoName}-socials`
                     ).style.bottom = '0';
+                    document.getElementById(`${videoName}-card`).style =
+                        videoCardStyle;
                 }}
                 onTouchStart={() => {
                     if (!isPlaying.current) {
@@ -144,33 +155,20 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                 </Box>
                 <Box
                     id={`${videoName}-card`}
+                    className='video-card'
                     sx={{
-                        position: 'relative',
-                        width: '100%',
-                        height: '100%',
-                        overflow: 'hidden',
-                        boxShadow: '0 0 25px -5px #FFFFFF',
-                        transition: 'all 0.8s ease',
-                        backgroundImage: `url("${require('./assets/images/' +
-                            coverName)}")`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
-                        ':hover': {
-                            boxShadow: '0 0 25px 2px #FFFFFF',
-                            background: 'none',
-                            // width: '220px',
-                            // height: '268px',
-                            scale: '1.05',
-                        },
+                        ...videoCardStyle,
                     }}
                     onMouseOver={handleMouseOver}
                     onMouseOut={handleMouseOut}
                     onTouchStart={() => {
+                        console.log('touch start');
                         if (!isPlaying.current) {
+                            console.log('touch start not playing');
                             handleMouseOver();
-                            document.getElementById(`${videoName}-card`).style =
-                                '0 0 25px 2px #FFFFFF';
+                            document.getElementById(
+                                `${videoName}-card`
+                            ).style.boxShadow = '0 0 25px 2px #FFFFFF';
                             document.getElementById(
                                 `${videoName}-card`
                             ).style.backgroundImage = 'none';
@@ -178,21 +176,10 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                                 `${videoName}-card`
                             ).style.scale = '1.05';
                         } else {
+                            console.log('touch start playing');
                             handleMouseOut();
                             document.getElementById(`${videoName}-card`).style =
-                                {
-                                    position: 'relative',
-                                    width: '100%',
-                                    height: '100%',
-                                    overflow: 'hidden',
-                                    boxShadow: '0 0 25px -5px #FFFFFF',
-                                    transition: 'all 0.8s ease',
-                                    backgroundImage: `url("${require('./assets/images/' +
-                                        coverName)}")`,
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center',
-                                    backgroundRepeat: 'no-repeat',
-                                };
+                                videoCardStyle;
                         }
                     }}
                 >
@@ -205,6 +192,8 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                         <video
                             muted={volume ? false : true}
                             id={`${videoName}`}
+                            disablePictureInPicture={true}
+                            playsInline={true}
                             style={{
                                 position: 'absolute',
                                 zIndex: '-1',
