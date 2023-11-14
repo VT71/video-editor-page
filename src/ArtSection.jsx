@@ -63,7 +63,8 @@ function ArtSection() {
                     variant='text'
                     sx={{
                         fontFamily: 'Goldman-Regular',
-                        color: '#5E001E',
+                        // color: '#5E001E',
+                        color: '#C924E9',
                         fontSize: '0.8rem',
                         textTransform: 'none',
                         paddingX: '0.3rem',
