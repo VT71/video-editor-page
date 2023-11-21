@@ -67,6 +67,10 @@ function ContactSection() {
                                 ':hover': {
                                     scale: '1.08',
                                 },
+                                '@media (max-width: 600px)': {
+                                    width: '20px',
+                                    height: '20px',
+                                },
                             }}
                         ></Box>
                         <Typography
@@ -74,6 +78,9 @@ function ContactSection() {
                                 fontFamily: 'Cinzel',
                                 color: '#E0C8E8',
                                 fontSize: '1.25rem',
+                                '@media (max-width: 600px)': {
+                                    fontSize: '1rem',
+                                },
                             }}
                         >{`KRIS_EFD`}</Typography>
                     </Box>
@@ -97,6 +104,10 @@ function ContactSection() {
                                 ':hover': {
                                     scale: '1.08',
                                 },
+                                '@media (max-width: 600px)': {
+                                    width: '20px',
+                                    height: '20px',
+                                },
                             }}
                         ></Box>
                         <Typography
@@ -104,6 +115,9 @@ function ContactSection() {
                                 fontFamily: 'Cinzel',
                                 color: '#E0C8E8',
                                 fontSize: '1.25rem',
+                                '@media (max-width: 600px)': {
+                                    fontSize: '1rem',
+                                },
                             }}
                         >{`KRIS_EFD`}</Typography>
                     </Box>
@@ -116,12 +130,23 @@ function ContactSection() {
                             columnGap: '0.5rem',
                         }}
                     >
-                        <EmailIcon sx={{ fontSize: '28px', color: '#fff' }} />
+                        <EmailIcon
+                            sx={{
+                                fontSize: '28px',
+                                color: '#fff',
+                                '@media (max-width: 600px)': {
+                                    fontSize: '24px',
+                                },
+                            }}
+                        />
                         <Typography
                             sx={{
                                 fontFamily: 'Cinzel',
                                 color: '#E0C8E8',
                                 fontSize: '1.25rem',
+                                '@media (max-width: 600px)': {
+                                    fontSize: '1rem',
+                                },
                             }}
                         >{`krisesfd11@gmail.com`}</Typography>
                     </Box>

@@ -3,9 +3,9 @@ import { useRef } from 'react';
 import './index.css';
 
 // @mui
-import { Box } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 
-function VideoCard({ volume, videoName, videoFormat, coverName }) {
+function VideoCard({ volume, videoName, videoFormat, coverName, links }) {
     const isPlaying = useRef(false);
 
     const [sourceRequested, setSourceRequested] = useState(false);
@@ -28,6 +28,11 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
         document.getElementById(`${videoName}-layer`).style.backgroundColor =
             'rgba(0,0,0,0)';
         document.getElementById(`${videoName}`).style.zIndex = '1';
+        document.getElementById(`${videoName}-card`).style.boxShadow =
+            '0 0 25px 2px #FFFFFF';
+        document.getElementById(`${videoName}-card`).style.backgroundImage =
+            'none';
+        document.getElementById(`${videoName}-card`).style.scale = '1.05';
         try {
             if (volume || volume === 0) {
                 document.getElementById(`${videoName}`).volume = volume / 100;
@@ -60,6 +65,7 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                 ).style.backgroundColor = 'rgba(0,0,0,0.4)';
             }, 500);
         }
+        document.getElementById(`${videoName}-card`).style = videoCardStyle;
     };
 
     const handleVideoEnd = (videoName) => {
@@ -116,7 +122,7 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                         transition: 'all 0.5s ease',
                     }}
                 >
-                    <Box
+                    {/* <Box
                         sx={{
                             width: '24px',
                             height: '24px',
@@ -151,7 +157,24 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                                 scale: '0.95',
                             },
                         }}
-                    ></Box>
+                    ></Box> */}
+                    <Button
+                        variant={'text'}
+                        sx={{
+                            color: '#E0C8E8',
+                            textTransform: 'none',
+                            ':hover': { color: '#fff' },
+                        }}
+                        href={links && links.tiktok && links.tiktok}
+                        target='_blank'
+                    >
+                        <Typography
+                            sx={{
+                                fontFamily: 'Goldman-Regular',
+                                fontSize: '0.8rem',
+                            }}
+                        >{`View on TikTok`}</Typography>
+                    </Button>
                 </Box>
                 <Box
                     id={`${videoName}-card`}
@@ -166,20 +189,20 @@ function VideoCard({ volume, videoName, videoFormat, coverName }) {
                         if (!isPlaying.current) {
                             console.log('touch start not playing');
                             handleMouseOver();
-                            document.getElementById(
-                                `${videoName}-card`
-                            ).style.boxShadow = '0 0 25px 2px #FFFFFF';
-                            document.getElementById(
-                                `${videoName}-card`
-                            ).style.backgroundImage = 'none';
-                            document.getElementById(
-                                `${videoName}-card`
-                            ).style.scale = '1.05';
+                            // document.getElementById(
+                            //     `${videoName}-card`
+                            // ).style.boxShadow = '0 0 25px 2px #FFFFFF';
+                            // document.getElementById(
+                            //     `${videoName}-card`
+                            // ).style.backgroundImage = 'none';
+                            // document.getElementById(
+                            //     `${videoName}-card`
+                            // ).style.scale = '1.05';
                         } else {
                             console.log('touch start playing');
                             handleMouseOut();
-                            document.getElementById(`${videoName}-card`).style =
-                                videoCardStyle;
+                            // document.getElementById(`${videoName}-card`).style =
+                            //     videoCardStyle;
                         }
                     }}
                 >

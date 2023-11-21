@@ -11,6 +11,21 @@ function ArtSection() {
     const [volume, setVolume] = useState(0);
     const nameButtonColor = useRef('#C924E9');
 
+    const links = {
+        1: { tiktok: 'https://vm.tiktok.com/ZMjE67LHW/' },
+        2: { tiktok: 'https://vm.tiktok.com/ZMjE6yoL1/' },
+        3: { tiktok: 'https://vm.tiktok.com/ZMjE6mp1W/' },
+        4: { tiktok: 'https://vm.tiktok.com/ZMjE6s4pV/' },
+        5: { tiktok: 'https://vm.tiktok.com/ZMjE6uBvD/' },
+        6: { tiktok: 'https://vm.tiktok.com/ZMjE65vo7/' },
+        7: { tiktok: 'https://vm.tiktok.com/ZMjE6seHR/' },
+        8: { tiktok: 'https://vm.tiktok.com/ZMjE6Cwek/' },
+        9: { tiktok: 'https://vm.tiktok.com/ZMjE6H2Gt/' },
+        10: { tiktok: 'https://vm.tiktok.com/ZMjE6UkDo/' },
+        11: { tiktok: 'https://vm.tiktok.com/ZMjE6gSAS/' },
+        12: { tiktok: 'https://vm.tiktok.com/ZMjE6W7Yy/' },
+    };
+
     // setInterval(() => {
     //     if (nameButtonColor.current === '#C924E9') {
     //         nameButtonColor.current = '#5E001E';
@@ -191,10 +206,10 @@ function ArtSection() {
                         videoName={`video${index + 1}`}
                         videoFormat={'mp4'}
                         coverName={`video${index + 1}Cover.png`}
+                        links={links[index + 1]}
                     />
                 ))}
             </Box>
-            {''}
         </Box>
     );
 }
