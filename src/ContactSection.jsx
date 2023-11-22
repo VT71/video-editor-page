@@ -1,7 +1,7 @@
 import React from 'react';
 
 // @mui
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Button, Link } from '@mui/material';
 
 // icons
 import EmailIcon from '@mui/icons-material/Email';
@@ -54,35 +54,56 @@ function ContactSection() {
                             columnGap: '0.5rem',
                         }}
                     >
-                        <Box
+                        <Link
+                            href={
+                                'https://instagram.com/kris.esfd?igshid=NzZlODBkYWE4Ng=='
+                            }
+                            target='_blank'
+                        >
+                            <Box
+                                sx={{
+                                    width: '24px',
+                                    height: '24px',
+                                    backgroundImage: `url("${require('./assets/images/instagramLogo.png')}")`,
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundPosition: 'center',
+                                    transition: 'scale 0.5s ease',
+                                    cursor: 'pointer',
+                                    ':hover': {
+                                        scale: '1.08',
+                                    },
+                                    ':active': {
+                                        scale: '0.95',
+                                    },
+                                    '@media (max-width: 600px)': {
+                                        width: '20px',
+                                        height: '20px',
+                                    },
+                                }}
+                            ></Box>
+                        </Link>
+                        <Button
+                            variant={'text'}
                             sx={{
-                                width: '24px',
-                                height: '24px',
-                                backgroundImage: `url("${require('./assets/images/instagramLogo.png')}")`,
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: 'center',
-                                transition: 'scale 0.5s ease',
-                                cursor: 'pointer',
-                                ':hover': {
-                                    scale: '1.08',
-                                },
-                                '@media (max-width: 600px)': {
-                                    width: '20px',
-                                    height: '20px',
-                                },
-                            }}
-                        ></Box>
-                        <Typography
-                            sx={{
-                                fontFamily: 'Cinzel',
                                 color: '#E0C8E8',
-                                fontSize: '1.25rem',
-                                '@media (max-width: 600px)': {
-                                    fontSize: '1rem',
-                                },
+                                ':hover': { color: '#fff' },
                             }}
-                        >{`KRIS_EFD`}</Typography>
+                            href={
+                                'https://instagram.com/kris.esfd?igshid=NzZlODBkYWE4Ng=='
+                            }
+                            target='_blank'
+                        >
+                            <Typography
+                                sx={{
+                                    fontFamily: 'Cinzel',
+                                    fontSize: '1.25rem',
+                                    '@media (max-width: 600px)': {
+                                        fontSize: '1rem',
+                                    },
+                                }}
+                            >{`KRIS_EFD`}</Typography>
+                        </Button>
                     </Box>
                     <Box
                         sx={{
@@ -91,35 +112,49 @@ function ContactSection() {
                             columnGap: '0.5rem',
                         }}
                     >
-                        <Box
+                        <Link href={'https://pin.it/54H5UAw'} target='_blank'>
+                            <Box
+                                sx={{
+                                    width: '24px',
+                                    height: '24px',
+                                    backgroundImage: `url("${require('./assets/images/pinterestLogo.png')}")`,
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundPosition: 'center',
+                                    transition: 'scale 0.5s ease',
+                                    cursor: 'pointer',
+                                    ':hover': {
+                                        scale: '1.08',
+                                    },
+                                    ':active': {
+                                        scale: '0.95',
+                                    },
+                                    '@media (max-width: 600px)': {
+                                        width: '20px',
+                                        height: '20px',
+                                    },
+                                }}
+                            ></Box>
+                        </Link>
+                        <Button
+                            variant={'text'}
                             sx={{
-                                width: '24px',
-                                height: '24px',
-                                backgroundImage: `url("${require('./assets/images/pinterestLogo.png')}")`,
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: 'center',
-                                transition: 'scale 0.5s ease',
-                                cursor: 'pointer',
-                                ':hover': {
-                                    scale: '1.08',
-                                },
-                                '@media (max-width: 600px)': {
-                                    width: '20px',
-                                    height: '20px',
-                                },
-                            }}
-                        ></Box>
-                        <Typography
-                            sx={{
-                                fontFamily: 'Cinzel',
                                 color: '#E0C8E8',
-                                fontSize: '1.25rem',
-                                '@media (max-width: 600px)': {
-                                    fontSize: '1rem',
-                                },
+                                ':hover': { color: '#fff' },
                             }}
-                        >{`KRIS_EFD`}</Typography>
+                            href={'https://pin.it/54H5UAw'}
+                            target='_blank'
+                        >
+                            <Typography
+                                sx={{
+                                    fontFamily: 'Cinzel',
+                                    fontSize: '1.25rem',
+                                    '@media (max-width: 600px)': {
+                                        fontSize: '1rem',
+                                    },
+                                }}
+                            >{`KRIS_EFD`}</Typography>
+                        </Button>
                     </Box>
                 </Box>
                 <Box>
@@ -130,25 +165,44 @@ function ContactSection() {
                             columnGap: '0.5rem',
                         }}
                     >
-                        <EmailIcon
+                        <Link
+                            href={'mailto:krisesfd11@gmail.com'}
+                        >
+                            <EmailIcon
+                                sx={{
+                                    fontSize: '28px',
+                                    color: '#fff',
+                                    transition: 'scale 0.5s ease',
+                                    ':hover': {
+                                        scale: '1.08',
+                                    },
+                                    ':active': {
+                                        scale: '0.95',
+                                    },
+                                    '@media (max-width: 600px)': {
+                                        fontSize: '24px',
+                                    },
+                                }}
+                            />
+                        </Link>
+                        <Button
+                            variant={'text'}
                             sx={{
-                                fontSize: '28px',
-                                color: '#fff',
-                                '@media (max-width: 600px)': {
-                                    fontSize: '24px',
-                                },
-                            }}
-                        />
-                        <Typography
-                            sx={{
-                                fontFamily: 'Cinzel',
                                 color: '#E0C8E8',
-                                fontSize: '1.25rem',
-                                '@media (max-width: 600px)': {
-                                    fontSize: '1rem',
-                                },
+                                ':hover': { color: '#fff' },
                             }}
-                        >{`krisesfd11@gmail.com`}</Typography>
+                            href={'mailto:krisesfd11@gmail.com'}
+                        >
+                            <Typography
+                                sx={{
+                                    fontFamily: 'Cinzel',
+                                    fontSize: '1.25rem',
+                                    '@media (max-width: 600px)': {
+                                        fontSize: '1rem',
+                                    },
+                                }}
+                            >{`krisesfd11@gmail.com`}</Typography>
+                        </Button>
                     </Box>
                 </Box>
                 <Typography
