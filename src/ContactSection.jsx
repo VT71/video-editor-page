@@ -165,9 +165,7 @@ function ContactSection() {
                             columnGap: '0.5rem',
                         }}
                     >
-                        <Link
-                            href={'mailto:krisesfd11@gmail.com'}
-                        >
+                        <Link href={'mailto:krisesfd11@gmail.com'}>
                             <EmailIcon
                                 sx={{
                                     fontSize: '28px',
@@ -214,7 +212,7 @@ function ContactSection() {
                         marginBottom: '1rem',
                         fontSize: '0.8rem',
                     }}
-                >{`© Victor Toma. All Rights Reserved.`}</Typography>
+                >{`© Cristina Grosu. All Rights Reserved.`}</Typography>
             </Box>
         </Box>
     );
